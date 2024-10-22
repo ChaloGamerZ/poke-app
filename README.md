@@ -1,46 +1,73 @@
-# Getting Started with Create React App
+# PokeApp
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+PokeApp es una aplicación web que permite buscar información sobre Pokémon utilizando la PokeAPI. La aplicación muestra detalles como la imagen del Pokémon, su descripción y su cadena evolutiva.
 
-## Available Scripts
+## Características
 
-In the project directory, you can run:
+- **Búsqueda de Pokémon:** Busca cualquier Pokémon por nombre.
+- **Detalles de Pokémon:** Muestra imagen, descripción y evoluciones del Pokémon seleccionado.
+- **Interfaz Estilizada:** Una apariencia inspirada en la Pokédex, con colores rojo y blanco.
 
-### `npm start`
+## Tecnologías Utilizadas
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- **React:** Librería principal para construir la interfaz de usuario.
+- **TypeScript:** Tipado estático para un código más robusto.
+- **Redux:** Gestión del estado global de la aplicación.
+- **Axios:** Para realizar solicitudes HTTP a la PokeAPI.
+- **Styled-Components:** Para estilizar los componentes con CSS en JS.
+- **React-Select:** Para el autocompletado en la búsqueda de Pokémon.
+- **Docker:** Contenerización de la aplicación para un despliegue fácil y consistente.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Instalación y Ejecución
 
-### `npm test`
+### Prerrequisitos
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Asegúrate de tener instalado:
+- Node.js
+- Docker
 
-### `npm run build`
+### Pasos de Instalación
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Clona el repositorio:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+    ```sh
+    git clone https://github.com/tu-usuario/pokeapp.git
+    cd pokeapp
+    ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. Instala las dependencias:
 
-### `npm run eject`
+    ```sh
+    npm install
+    ```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+3. Inicia la aplicación en modo de desarrollo:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+    ```sh
+    npm start
+    ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+4. Abre [http://localhost:3000](http://localhost:3000) en tu navegador.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### Contenerización con Docker
 
-## Learn More
+1. Construye la imagen Docker:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+    ```sh
+    docker build -t pokeapp .
+    ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+2. Ejecuta el contenedor:
+
+    ```sh
+    docker run -p 3000:3000 pokeapp
+    ```
+
+3. Abre [http://localhost:3000](http://localhost:3000) en tu navegador.
+
+## Uso
+
+1. Abre la aplicación en tu navegador.
+2. Usa la barra de búsqueda para encontrar un Pokémon por nombre.
+3. Haz clic en las sugerencias para ver los detalles del Pokémon.
+4. Explora la descripción y las evoluciones del Pokémon seleccionado.
